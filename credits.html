@@ -6,116 +6,207 @@
     <title>Créditos y Librerías - RADAR-SD</title>
     <style>
         :root {
+            --bg-color: #050505;
+            --text-main: #e0e0e0;
             --cyan: #00ffff;
             --magenta: #ff00ff;
-            --bg: #000000;
-            --text: #e0e0e0;
-            --gray: #888888;
+            --dark-gray: #1a1a1a;
+            --border-color: #333;
         }
         body {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: var(--bg);
-            color: var(--text);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             padding: 20px;
             line-height: 1.6;
+            font-size: 15px;
+            margin: 0;
         }
-        .header {
-            border-left: 4px solid var(--cyan);
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #0a0a0a;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+        }
+        h1 {
+            color: var(--cyan);
+            font-size: 26px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--cyan);
+            padding-bottom: 15px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+        .effective-date {
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        h2 {
+            color: var(--cyan);
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-top: 40px;
+            border-left: 4px solid var(--magenta);
             padding-left: 15px;
+            background: linear-gradient(90deg, rgba(255,0,255,0.1) 0%, rgba(0,0,0,0) 100%);
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .section {
             margin-bottom: 30px;
         }
-        h1 { color: var(--cyan); font-size: 20px; text-transform: uppercase; letter-spacing: 2px; }
-        h2 { color: var(--magenta); font-size: 16px; margin-top: 30px; border-bottom: 1px solid #333; padding-bottom: 5px; }
-        .section { margin-bottom: 25px; }
-        .lib-name { font-weight: bold; color: #ffffff; }
-        .license { font-size: 11px; color: var(--gray); margin-top: 4px; }
-        .attribution { font-size: 13px; margin-top: 8px; border-left: 2px solid #222; padding-left: 10px; }
-        a { color: var(--cyan); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .footer { margin-top: 50px; font-size: 10px; text-align: center; color: var(--gray); border-top: 1px solid #222; padding-top: 20px; }
+        .attribution-card {
+            background: var(--dark-gray);
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid #222;
+            margin-bottom: 15px;
+        }
+        .lib-name {
+            font-weight: bold;
+            color: #fff;
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .license-tag {
+            display: inline-block;
+            background: #222;
+            color: var(--cyan);
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            border: 1px solid var(--cyan);
+        }
+        p {
+            margin-bottom: 10px;
+            color: #ccc;
+            font-size: 14px;
+        }
+        a {
+            color: var(--cyan);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+        a:hover {
+            border-bottom-color: var(--cyan);
+        }
+        .footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 11px;
+            color: #666;
+            line-height: 1.8;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 20px; }
+            h2 { font-size: 16px; }
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Créditos de Software</h1>
-        <p>RADAR-SD es posible gracias a la comunidad de código abierto.</p>
-    </div>
+<div class="container">
+    <h1>Créditos de Software y Atribución de Datos</h1>
+    <div class="effective-date">RADAR-SD | Protocolo de Red Descentralizada | Versión 1.0.0</div>
 
+    <p style="text-align: center;">RADAR-SD es posible gracias a la labor de miles de desarrolladores de la comunidad de código abierto y proveedores de datos geográficos libres.</p>
+
+    <h2>1. Cartografía y Datos Geográficos</h2>
     <div class="section">
-        <h2>Cartografía y Mapas</h2>
-
-        <div class="attribution">
-            <span class="lib-name">OpenStreetMap (Datos)</span><br>
-            Datos de mapas &copy; <a href="https://www.openstreetmap.org/copyright">Colaboradores de OpenStreetMap</a>.
-            <div class="license">Licencia: Open Database License (ODbL)</div>
+        <div class="attribution-card">
+            <span class="lib-name">OpenStreetMap</span>
+            <span class="license-tag">Open Database License (ODbL)</span>
+            <p>Los datos de los mapas son © <a href="https://www.openstreetmap.org/copyright">Colaboradores de OpenStreetMap</a>.</p>
         </div>
 
-        <div class="attribution">
-            <span class="lib-name">CARTO (Basemap Dark Matter)</span><br>
-            &copy; <a href="https://carto.com/attributions">CARTO</a>. Basado en datos de OpenStreetMap.
+        <div class="attribution-card">
+            <span class="lib-name">CARTO (Dark Matter Basemap)</span>
+            <span class="license-tag">CC BY 3.0</span>
+            <p>© <a href="https://carto.com/attributions">CARTO</a>. Basado en datos de OpenStreetMap.</p>
         </div>
 
-        <div class="attribution">
-            <span class="lib-name">osmdroid</span><br>
-            Copyright &copy; osmdroid contributors.
-            <div class="license">Licencia: Apache License 2.0</div>
+        <div class="attribution-card">
+            <span class="lib-name">osmdroid</span>
+            <span class="license-tag">Apache License 2.0</span>
+            <p>Copyright © osmdroid contributors. Herramientas de renderizado de mapas offline.</p>
         </div>
 
-        <div class="attribution">
-            <span class="lib-name">OSMBonusPack</span><br>
-            Copyright &copy; M. Kergall.
-            <div class="license">Licencia: LGPL 3.0</div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Infraestructura de Red P2P</h2>
-
-        <div class="attribution">
-            <span class="lib-name">Google Nearby Connections</span><br>
-            Copyright &copy; Google LLC.
-            <div class="license">Parte de los Servicios de Google Play.</div>
+        <div class="attribution-card">
+            <span class="lib-name">OSMBonusPack</span>
+            <span class="license-tag">LGPL 3.0</span>
+            <p>Copyright © M. Kergall. Funcionalidades extendidas para OpenStreetMap en Android.</p>
         </div>
     </div>
 
+    <h2>2. Infraestructura P2P y Sincronización</h2>
     <div class="section">
-        <h2>Inteligencia Artificial Local</h2>
+        <div class="attribution-card">
+            <span class="lib-name">Google Nearby Connections</span>
+            <span class="license-tag">Google Play Services</span>
+            <p>Protocolo de descubrimiento y transferencia de datos local sin servidor. Propiedad de Google LLC.</p>
+        </div>
 
-        <div class="attribution">
-            <span class="lib-name">LiteRT (TensorFlow Lite)</span><br>
-            Copyright &copy; The TensorFlow Authors.
-            <div class="license">Licencia: Apache License 2.0</div>
+        <div class="attribution-card">
+            <span class="lib-name">Google Play Services Location</span>
+            <span class="license-tag">Google Play Services</span>
+            <p>Gestión de ubicación optimizada para el proveedor fusionado (Fused Location Provider).</p>
         </div>
     </div>
 
+    <h2>3. Inteligencia Artificial de Borde</h2>
     <div class="section">
-        <h2>Android Jetpack y Componentes Core</h2>
-        <p class="license">Las siguientes librerías de AndroidX y Jetpack están licenciadas bajo Apache License 2.0:</p>
-        <div class="attribution">
-            - Jetpack Compose (UI Framework)<br>
-            - Material Design Components 3<br>
-            - Room Persistence Library<br>
-            - CameraX (Core, Camera2, Lifecycle, View)<br>
-            - Lifecycle & ViewModel (Compose integration)<br>
-            - Core KTX & Splashscreen
+        <div class="attribution-card">
+            <span class="lib-name">LiteRT (TensorFlow Lite)</span>
+            <span class="license-tag">Apache License 2.0</span>
+            <p>Copyright © The TensorFlow Authors. Motor de ejecución de modelos de IA en el dispositivo.</p>
         </div>
     </div>
 
+    <h2>4. Android Jetpack y Framework</h2>
     <div class="section">
-        <h2>Utilidades y Carga de Imágenes</h2>
+        <div class="attribution-card">
+            <span class="lib-name">Componentes de AndroidX</span>
+            <span class="license-tag">Apache License 2.0</span>
+            <p>Incluye: Jetpack Compose (UI), Material Design 3, Room Persistence Library, CameraX, Lifecycle y Core KTX.</p>
+        </div>
+    </div>
 
-        <div class="attribution">
-            <span class="lib-name">Coil (Image Loading Library)</span><br>
-            Copyright &copy; Coil Contributors.
-            <div class="license">Licencia: Apache License 2.0</div>
+    <h2>5. Utilidades y Multimedia</h2>
+    <div class="section">
+        <div class="attribution-card">
+            <span class="lib-name">Coil (Image Loading)</span>
+            <span class="license-tag">Apache License 2.0</span>
+            <p>Copyright © Coil Contributors. Librería optimizada para la carga de imágenes asíncronas.</p>
+        </div>
+
+        <div class="attribution-card">
+            <span class="lib-name">ExifInterface</span>
+            <span class="license-tag">Apache License 2.0</span>
+            <p>Gestión y limpieza de metadatos de imágenes para garantizar el anonimato.</p>
         </div>
     </div>
 
     <div class="footer">
         PROTOCOL VANGUARD &copy; 2026 RADAR-SD<br>
-        Desarrollado para la resiliencia ciudadana en entornos urbanos.<br>
+        SANTO DOMINGO DE LOS TSÁCHILAS | ECUADOR<br>
         <br>
-        Este software se distribuye "TAL CUAL", sin garantías de ningún tipo.
+        Este software utiliza librerías licenciadas bajo la Apache License 2.0. Usted puede obtener una copia de la licencia en http://www.apache.org/licenses/LICENSE-2.0
     </div>
+</div>
 </body>
 </html>
