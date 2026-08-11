@@ -46,6 +46,7 @@ En cumplimiento con la **Ley Orgánica de Protección de Datos Personales (Ecuad
 | :--- | :--- |
 | [`terms.html`](terms.html) | **Protocolo de Red y Reglas de Consenso:** Detalla el Veto de Vanguard y la responsabilidad técnica del nodo. |
 | [`privacy.html`](privacy.html) | **Política de Privacidad P2P:** Detalla la anonimización, el uso de sensores y la ausencia de rastreo centralizado. |
+| [`credits.html`](credits.html) | **Créditos:** Detalla todos los servicios y librerías usadas en la app. |
 
 > [!TIP]
 > La aplicación incluye un **Visor de Protocolos** interno que permite consultar estos documentos offline y, mediante la última actualización, abrirlos en el navegador para auditoría externa.
@@ -70,4 +71,3 @@ Disponible para dispositivos Android en la vanguardia ciudadana:
 ---
 *RADAR-SD es un protocolo de fuente abierta distribuido para la resiliencia ciudadana en Santo Domingo de los Tsáchilas.*
 ---
-*Desarrollado como una iniciativa de infraestructura crítica y monitoreo ciudadano descentralizado.*
