@@ -3,118 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Términos y Condiciones - RADAR-SD</title>
+    <title>Términos del Servicio - RADAR-SD</title>
     <style>
+        :root {
+            --bg-color: #050505;
+            --text-main: #e0e0e0;
+            --cyan: #00ffff;
+            --magenta: #ff00ff;
+            --dark-gray: #1a1a1a;
+            --border-color: #333;
+        }
         body {
-            background-color: #000;
-            color: #e0e0e0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            padding: 30px;
-            line-height: 1.8;
-            font-size: 14px;
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 15px;
+            margin: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            background: #0a0a0a;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
         }
         h1 {
-            color: #00ffff;
-            font-size: 22px;
+            color: var(--cyan);
+            font-size: 26px;
             text-transform: uppercase;
-            border-bottom: 2px solid #00ffff;
+            border-bottom: 2px solid var(--cyan);
             padding-bottom: 15px;
-            margin-bottom: 30px;
-            letter-spacing: 3px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
             text-align: center;
         }
+        .effective-date {
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         h2 {
-            color: #00ffff;
-            font-size: 16px;
+            color: var(--cyan);
+            font-size: 18px;
             text-transform: uppercase;
             margin-top: 40px;
-            border-left: 4px solid #ff00ff;
+            border-left: 4px solid var(--magenta);
             padding-left: 15px;
+            background: linear-gradient(90deg, rgba(255,0,255,0.1) 0%, rgba(0,0,0,0) 100%);
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
-        p, li {
-            color: #b0b0b0;
+        h3 {
+            color: var(--magenta);
+            font-size: 15px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        p {
             margin-bottom: 15px;
+            color: #ccc;
             text-align: justify;
         }
-        .highlight {
-            color: #ff00ff;
-            font-weight: bold;
+        ul, ol {
+            background: var(--dark-gray);
+            padding: 20px 20px 20px 40px;
+            border-radius: 4px;
+            border: 1px solid #222;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #ddd;
+        }
+        strong {
+            color: #fff;
+        }
+        .legal-clarification {
+            background-color: rgba(0, 255, 255, 0.03);
+            border-left: 4px solid var(--cyan);
+            padding: 25px;
+            margin: 25px 0;
+            font-size: 14px;
+            color: #ddd;
+            border-radius: 0 4px 4px 0;
+        }
+        .detail-subclause {
+            margin-left: 10px;
+            border-left: 1px solid #222;
+            padding-left: 25px;
+            margin-top: 20px;
+        }
+        .vanguard-box {
+            background-color: rgba(0, 255, 255, 0.05);
+            border: 1px solid var(--cyan);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+        }
+        .vanguard-box strong {
+            color: var(--cyan);
         }
         .warning-box {
-            background-color: #1a0000;
-            border: 1px solid #ff0000;
+            background-color: rgba(255, 0, 255, 0.05);
+            border: 1px solid var(--magenta);
             padding: 20px;
-            margin: 20px 0;
+            margin: 25px 0;
             border-radius: 4px;
-            color: #ff8888;
         }
         .footer {
             margin-top: 60px;
-            font-size: 11px;
-            color: #444;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
             text-align: center;
-            border-top: 1px solid #222;
-            padding-top: 30px;
-            letter-spacing: 1px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 11px;
+            color: #666;
+            line-height: 1.8;
+        }
+        code {
+            background: #222;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: var(--cyan);
+            font-family: 'Courier New', monospace;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 20px; }
+            h2 { font-size: 16px; }
+            .detail-subclause { padding-left: 15px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Términos del Servicio y Protocolo de Red</h1>
-        
-        <p>Bienvenido al sistema <span class="highlight">RADAR-SD</span>. Al activar su nodo y unirse a la red Vanguard, usted acepta quedar vinculado por los siguientes términos técnicos y operativos.</p>
+<div class="container">
+    <h1>Términos del Servicio y Protocolo de Red</h1>
+    <div class="effective-date">Última actualización: Julio 2026 | Aplicación: RADAR-SD | Versión Legal: 1.0.0</div>
 
-        <h2>1. Naturaleza de la Plataforma</h2>
-        <p>Radar-SD es una infraestructura de software descentralizada. Usted entiende y acepta que el servicio depende exclusivamente de la colaboración de otros ciudadanos a través de una <span class="highlight">Red Mesh P2P</span>. No existe una entidad central que garantice la disponibilidad perpetua de los datos si no hay nodos activos en su área.</p>
-
-        <h2>2. Reglas de Integridad y Reputación</h2>
-        <p>Para asegurar la fiabilidad de la red urbana, Radar-SD implementa un <span class="highlight">Algoritmo de Reputación Automático</span>:</p>
-        <ul>
-            <li><strong>Penalizaciones:</strong> El envío deliberado de reportes falsos, firmas digitales inválidas o el uso de lenguaje abusivo resultará en una deducción de <span class="highlight">-5 puntos</span> de integridad.</li>
-            <li><strong>Veto de Nodo:</strong> Si el puntaje de su nodo alcanza los <span class="highlight">-10 puntos</span>, su dispositivo será bloqueado automáticamente por otros nodos de la red, impidiéndole transmitir o recibir información nueva.</li>
-            <li><strong>Validación Comunitaria:</strong> La veracidad de un incidente se confirma mediante el consenso. Un reporte solo alcanza el estado "VERIFICADO" tras recibir múltiples firmas de validación de diferentes operativos.</li>
-        </ul>
-
-        <h2>3. Uso de Recursos del Dispositivo</h2>
-        <p>Al utilizar Radar-SD, usted autoriza a la aplicación a utilizar los siguientes recursos para el beneficio de la comunidad:</p>
-        <ul>
-            <li><strong>Batería:</strong> El escaneo continuo de Bluetooth y Wi-Fi para el descubrimiento de nodos puede impactar el consumo de energía. Usted puede ajustar esto en el "Modo de Ahorro" en los ajustes.</li>
-            <li><strong>Almacenamiento:</strong> El sistema descargará mapas y recibirá reportes (incluyendo imágenes) de otros usuarios. Es su responsabilidad gestionar el espacio mediante la herramienta de "Limpieza de Caché".</li>
-            <li><strong>Conectividad:</strong> La aplicación utiliza el ancho de banda local para el intercambio de datos entre teléfonos.</li>
-        </ul>
-
-        <h2>4. Propiedad Intelectual</h2>
-        <p>El diseño de la interfaz "Vanguard", los algoritmos de consenso P2P y el código fuente de Radar-SD son propiedad exclusiva de <span class="highlight">ASKIR / RADAR-SD</span>. Queda prohibida la ingeniería inversa o la modificación del protocolo para emitir reportes falsos masivos (ataques Sybil).</p>
-
-        <h2>5. Deslinde de Responsabilidad</h2>
-        <div class="warning-box">
-            <strong>AVISO CRÍTICO:</strong> Radar-SD es una herramienta de monitoreo informativo. Los desarrolladores NO se hacen responsables por:
-            <br>- La exactitud de los reportes emitidos por terceros.
-            - Accidentes derivados de la inspección visual de baches o fallas.
-            - La falta de respuesta de las autoridades ante los reportes generados en la red.
-        </div>
-
-        <h2>6. Comportamiento Prohibido</h2>
-        <p>Usted se compromete a no utilizar el sistema para:</p>
-        <ul>
-            <li>Promocionar propaganda política o comercial.</li>
-            <li>Acosar a otros ciudadanos mediante comentarios en los reportes.</li>
-            <li>Intentar suplantar la identidad de otro nodo mediante la manipulación de llaves criptográficas.</li>
-        </ul>
-
-        <h2>7. Jurisdicción y Cambios</h2>
-        <p>Estos términos se rigen por la lógica de la red descentralizada. Nos reservamos el derecho de actualizar los protocolos de consenso para mejorar la seguridad de la red sin previo aviso.</p>
-
-        <div class="footer">
-            NETWORK_ID: RADAR_VANGUARD_MESH<br>
-            STATUS: ACTIVE_NODE<br>
-            LEGAL_ENFORCEMENT: CRYPTOGRAPHIC_CONSENSUS
-        </div>
+    <div class="legal-clarification">
+        <strong>ACEPTACIÓN TÉCNICA:</strong> Al activar su nodo en el sistema RADAR-SD y unirse a la red Mesh P2P, usted acepta quedar vinculado por estos términos. Si la naturaleza descentralizada o los protocolos de consenso aquí descritos no se alinean con sus preferencias de uso, usted tiene la total libertad de no aceptar estos términos, lo cual mantendrá la aplicación en un estado inerte sin generar identidad ni tráfico de red. Asimismo, puede desinstalar la aplicación o utilizar la opción de <strong>Revocar Consentimiento</strong> desde los ajustes para retirar su nodo y detener cualquier intercambio de datos.
+        <br><br>
+        <strong>COMPLEMENTARIEDAD:</strong> Este documento debe leerse en conjunto con la <em>Política de Anonimato, Protocolo de Red y Responsabilidad Técnica</em>, la cual detalla los mecanismos criptográficos de privacidad y borrado que rigen este sistema.
     </div>
+
+    <h2>1. Naturaleza de la Infraestructura Descentralizada</h2>
+    <p>RADAR-SD es una herramienta de software que permite la creación de una red de datos ciudadana sin dependencia de servidores centrales ni infraestructuras gubernamentales o corporativas.</p>
+    <ul>
+        <li><strong>Red Mesh P2P:</strong> Usted entiende que el servicio depende exclusivamente de la colaboración de otros dispositivos activos en su área geográfica. No existe garantía de disponibilidad de datos si no hay nodos operativos cerca.</li>
+        <li><strong>Autonomía de Nodos:</strong> Cada dispositivo actúa como un servidor independiente. El control de los datos recibidos reside exclusivamente en el dispositivo del usuario receptor.</li>
+        <li><strong>Neutralidad de los Desarrolladores:</strong> El equipo de desarrollo no opera la red, solo proporciona el código de fuente abierta necesario para su funcionamiento.</li>
+    </ul>
+
+    <h2>2. Reglas de Integridad del Nodo y Consenso de Red</h2>
+    <p>Para garantizar la fiabilidad del canal, RADAR-SD gestiona la reputación de las <strong>Identidades Virtuales Técnicas (Nodos)</strong> mediante un protocolo de consenso comunitario:</p>
+    <div class="detail-subclause">
+        <ul>
+            <li><strong>Sobre el Nodo:</strong> RADAR-SD utiliza identificadores seudonimizados (nodos) para garantizar la privacidad técnica. Estos nodos no contienen información personal del usuario, pero pueden ser vinculados a la actividad del dispositivo.</li>
+            <li><strong>Evaluación de la Integridad:</strong> Su identidad en la red es un "Nodo" criptográfico independiente. El sistema evalúa única y exclusivamente el comportamiento matemático de una llave, no la conducta de una persona física identificable. Al no existir un registro tradicional (KYC), el protocolo protege la separación entre el agente técnico y el sujeto humano.</li>
+            <li><strong>Tratamiento de Datos por Diseño:</strong> RADAR-SD no recopila, almacena ni gestiona sus datos personales en servidores centralizados. Toda la información que usted ingresa en la aplicación se almacena exclusivamente en su dispositivo móvil. La comunicación con otros nodos (usuarios) se realiza mediante tecnologías P2P/Nearby que no requieren de un servidor central.</li>
+            <li><strong>Filtro Técnico Anti-Spam:</strong> El "Vanguard Veto" es una herramienta técnica indispensable para proteger la disponibilidad de la red Mesh. Dado que recursos como el ancho de banda, el almacenamiento y la batería son limitados en dispositivos móviles, el protocolo ignora automáticamente los datos de Nodos que no alcanzan el consenso comunitario para evitar la congestión y ataques de denegación de servicio (DDoS).</li>
+            <li><strong>Responsabilidad sobre el Contenido:</strong> Como usuario, usted actúa como autor de los reportes. La aplicación le brinda un espacio técnico para la difusión de información de interés público. Usted se compromete a no utilizar esta plataforma para publicar información personal de terceros, imágenes que identifiquen personas sin su consentimiento o cualquier otro dato sensible.</li>
+            <li><strong>Uso de la Función de Reporte:</strong> El sistema de reportes está diseñado para la categorización de incidentes ciudadanos en áreas de <strong>INFRAESTRUCTURA</strong> (Bache Crítico, Hundimiento, Grieta Estructural, Escombros), <strong>MATRIZ HIDRÁULICA</strong> (Fuga de Agua, Alcantarillado, Sumidero Obstruido), <strong>RED ELÉCTRICA</strong> (Luminaria Inactiva, Cableado Expuesto, Poste Dañado) y <strong>GESTIÓN URBANA</strong> (Residuos, Señalética, Espacio Público). El campo de descripción es de uso obligatorio para garantizar la calidad de la red. El usuario declara conocer que el uso indebido de este campo para difundir datos personales de terceros, calumnias o información falsa es de su exclusiva responsabilidad, deslindando al desarrollador de cualquier reclamación legal.</li>
+            <li><strong>Veto por Consenso:</strong> El veto es el resultado de la votación de otros Nodos sobre la validez de los reportes enviados. Si la comunidad identifica y purga sistemáticamente reportes falsos de un Nodo, la red deja de procesar sus transmisiones para preservar la salud técnica del canal.</li>
+            <li><strong>Alcance de la Restricción:</strong> El veto limita exclusivamente la función de <strong>emisión</strong> de datos del Nodo. El usuario humano mantiene acceso total a la recepción de alertas, visualización del mapa y funcionalidades de consulta, garantizando que el acceso a la información permanezca intacto.</li>
+        </ul>
+    </div>
+
+    <h2>3. Uso de Recursos y Responsabilidad Técnica</h2>
+    <p>Al participar en la red Vanguard, usted autoriza el uso de los siguientes recursos de su dispositivo para el mantenimiento de la red mesh:</p>
+    <ul>
+        <li><strong>Batería y Radiofrecuencia:</strong> El descubrimiento continuo de nodos mediante Bluetooth y Wi-Fi Direct es esencial para la red. Usted acepta el impacto moderado en el consumo de energía.</li>
+        <li><strong>Almacenamiento Local (Bóveda):</strong> El sistema descargará mapas y recibirá reportes (incluyendo evidencias gráficas) de otros usuarios. Es responsabilidad del usuario gestionar el espacio mediante las herramientas de limpieza de caché proporcionadas.</li>
+        <li><strong>Ancho de Banda Local:</strong> La aplicación utiliza conectividad local para el intercambio de paquetes de datos entre teléfonos cercanos.</li>
+    </ul>
+
+    <h2>4. Propiedad Intelectual y Código Abierto</h2>
+    <p>El diseño de la interfaz "Vanguard", los algoritmos de consenso P2P y el protocolo de red son propiedad de <strong>ASKIR / RADAR-SD</strong>, distribuidos bajo modelos de transparencia y auditoría pública.</p>
+    <ul>
+        <li><strong>Prohibición de Ataques Sybil:</strong> Queda prohibida la modificación del protocolo para suplantar múltiples identidades de nodos con el fin de manipular el consenso de la red.</li>
+        <li><strong>Ingeniería Inversa Maliciosa:</strong> Se prohíbe cualquier intento de descompilación destinado a romper los mecanismos de anonimización que protegen a los ciudadanos.</li>
+    </ul>
+
+    <h2>5. Deslinde de Responsabilidad y Uso Ético</h2>
+    <div class="warning-box">
+        <strong>AVISO LEGAL Y DESLINDE DE RESPONSABILIDAD:</strong><br><br>
+        Al utilizar RADAR-SD, usted asume los siguientes riesgos y responsabilidades:
+        <br><br>
+        • <strong>Asunción de Riesgos del Entorno Físico (OPSEC) y Responsabilidad sobre Terceros:</strong> El Desarrollador provee una infraestructura con altos estándares de anonimato digital y privacidad por diseño. Sin embargo, el uso de RADAR-SD ocurre en el mundo real, por lo que el Usuario comprende y acepta lo siguiente:
+        <br>
+        • <strong>Riesgos Físicos y Videovigilancia:</strong> El Desarrollador no puede garantizar el anonimato físico. El acto de utilizar un dispositivo móvil para capturar fotografías en la vía pública conlleva el riesgo inherente de ser grabado por cámaras de seguridad (CCTV) de terceros o ser visto por transeúntes. El Usuario asume total y exclusiva responsabilidad de evaluar la seguridad de su entorno físico antes de generar un reporte.
+        <br>
+        • <strong>Protección de Terceros:</strong> El Usuario es el único responsable legal del contenido multimedia que decide transmitir en la red P2P. El Usuario se obliga contractualmente a utilizar la herramienta de <strong>Desenfocado</strong> integrada en la Aplicación para ocultar rostros de personas, placas vehiculares o cualquier otra información sensible de terceros. La omisión de esta obligación y cualquier reclamación civil por invasión a la privacidad o daño a la imagen recaerá de manera exclusiva sobre el Usuario emisor, eximiendo de toda responsabilidad al Desarrollador.
+        <br>
+        • <strong>Prohibición de Actividades Ilícitas:</strong> RADAR-SD prohíbe estrictamente el uso del anonimato para la comisión de delitos. La red utilizará el Consenso de Veto para purgar a cualquier Nodo malicioso.
+        <br>
+        • <strong>Exactitud de Datos de Terceros:</strong> Los desarrolladores NO garantizan la veracidad de los reportes emitidos por otros usuarios. RADAR-SD es un canal neutral de transmisión.
+        <br>
+        • <strong>Monitor Electoral (OSINT):</strong> Los datos de candidatos son registros públicos del CNE integrados estáticamente. Dada la alta volatilidad, el ciudadano tiene la <strong>obligación de verificar</strong> la información con fuentes oficiales. Los análisis de propuestas son criterios técnicos y no información oficial.
+        <br>
+        • <strong>Integridad Física:</strong> Los desarrolladores NO se hacen responsables por accidentes o daños derivados de la participación activa en la red de monitoreo.
+        <br>
+        • <strong>Inacción Gubernamental:</strong> El registro de un incidente en la red no constituye una denuncia formal ante autoridades competentes ni garantiza respuesta estatal alguna.
+    </div>
+
+    <h2>6. Comportamiento Prohibido y Ética de Red</h2>
+    <p>Usted se compromete a no utilizar el protocolo para:</p>
+    <ul>
+        <li>Promocionar propaganda política partidista o material comercial no autorizado.</li>
+        <li>Acosar o intimidar a otros ciudadanos mediante comentarios en los reportes.</li>
+        <li>Intentar la des-anonimización de otros nodos mediante análisis de tráfico de red.</li>
+    </ul>
+
+    <h2>7. Jurisdicción y Resolución de Conflictos</h2>
+    <p>Estos términos se rigen por los principios de la red descentralizada y las leyes vigentes en la República del Ecuador en materia de tecnología y neutralidad de red.</p>
+    <p>Cualquier disputa técnica será resuelta mediante el consenso de los protocolos de red. Dada la naturaleza de software libre, comunitario y sin fines de lucro del proyecto, cualquier controversia legal se someterá prioritariamente a mecanismos de <strong>Mediación y Resolución Amistosa</strong>. En caso de ser estrictamente necesario, se recurrirá a los tribunales competentes en Santo Domingo de los Tsáchilas, Ecuador, bajo principios de economía procesal.</p>
+
+    <h2>8. Contacto y Soporte</h2>
+    <p>Al ser un protocolo descentralizado operado por la comunidad, no existe un centro de atención al cliente tradicional. Para reportar errores técnicos en el código fuente o consultas legales formales, puede dirigirse al canal oficial proporcionado en la plataforma de distribución (Google Play Store) o mediante el repositorio oficial de código abierto.</p>
+
+    <div class="footer">
+        SISTEMA: RADAR_SD_VANGUARD<br>
+        VERSIÓN DE DOCUMENTO LEGAL: 1.0.0<br>
+        NIVEL DE SEGURIDAD: ALTO (AES-256 + ECDSA + TTL + ANONIMIZACIÓN)<br>
+        BASE LEGAL: CONSTITUCIÓN | LOPDP ECUADOR | PRINCIPIO DE NEUTRALIDAD TECNOLÓGICA
+    </div>
+</div>
 </body>
 </html>
