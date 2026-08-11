@@ -5,133 +5,288 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad - RADAR-SD</title>
     <style>
+        :root {
+            --bg-color: #050505;
+            --text-main: #e0e0e0;
+            --cyan: #00ffff;
+            --magenta: #ff00ff;
+            --dark-gray: #1a1a1a;
+            --border-color: #333;
+        }
         body {
-            background-color: #000;
-            color: #e0e0e0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            padding: 30px;
-            line-height: 1.8;
-            font-size: 14px;
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 15px;
+            margin: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            background: #0a0a0a;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
         }
         h1 {
-            color: #00ffff;
-            font-size: 22px;
+            color: var(--cyan);
+            font-size: 26px;
             text-transform: uppercase;
-            border-bottom: 2px solid #00ffff;
+            border-bottom: 2px solid var(--cyan);
             padding-bottom: 15px;
-            margin-bottom: 30px;
-            letter-spacing: 3px;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
             text-align: center;
         }
+        .effective-date {
+            text-align: center;
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         h2 {
-            color: #00ffff;
-            font-size: 16px;
+            color: var(--cyan);
+            font-size: 18px;
             text-transform: uppercase;
             margin-top: 40px;
-            border-left: 4px solid #ff00ff;
+            border-left: 4px solid var(--magenta);
             padding-left: 15px;
+            background: linear-gradient(90deg, rgba(255,0,255,0.1) 0%, rgba(0,0,0,0) 100%);
+            padding-top: 5px;
+            padding-bottom: 5px;
         }
         h3 {
-            color: #ff00ff;
-            font-size: 13px;
-            text-transform: uppercase;
+            color: var(--magenta);
+            font-size: 15px;
             margin-top: 25px;
+            margin-bottom: 10px;
         }
-        p, li {
-            color: #b0b0b0;
+        p {
             margin-bottom: 15px;
+            color: #ccc;
             text-align: justify;
         }
-        .highlight {
-            color: #ff00ff;
-            font-weight: bold;
+        ul, ol {
+            background: var(--dark-gray);
+            padding: 20px 20px 20px 40px;
+            border-radius: 4px;
+            border: 1px solid #222;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+            color: #ddd;
+        }
+        strong {
+            color: #fff;
+        }
+        .legal-clarification {
+            background-color: rgba(0, 255, 255, 0.03);
+            border-left: 4px solid var(--cyan);
+            padding: 25px;
+            margin: 25px 0;
+            font-size: 14px;
+            color: #ddd;
+            border-radius: 0 4px 4px 0;
+        }
+        .detail-subclause {
+            margin-left: 10px;
+            border-left: 1px solid #222;
+            padding-left: 25px;
+            margin-top: 20px;
         }
         .vanguard-box {
-            background-color: #0a0a0a;
-            border: 1px solid #333;
+            background-color: rgba(0, 255, 255, 0.05);
+            border: 1px solid var(--cyan);
             padding: 20px;
-            margin: 20px 0;
+            margin: 25px 0;
             border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
         }
-        .important-notice {
-            border: 1px solid #ff00ff;
-            padding: 15px;
-            color: #ffffff;
-            font-weight: bold;
-            background: rgba(255, 0, 255, 0.05);
+        .vanguard-box strong {
+            color: var(--cyan);
+        }
+        .warning-box {
+            background-color: rgba(255, 0, 255, 0.05);
+            border: 1px solid var(--magenta);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
         }
         .footer {
             margin-top: 60px;
-            font-size: 11px;
-            color: #444;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
             text-align: center;
-            border-top: 1px solid #222;
-            padding-top: 30px;
-            letter-spacing: 1px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 11px;
+            color: #666;
+            line-height: 1.8;
+        }
+        code {
+            background: #222;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: var(--cyan);
+            font-family: 'Courier New', monospace;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 20px; }
+            h2 { font-size: 16px; }
+            .detail-subclause { padding-left: 15px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Política de Privacidad y Manejo de Datos</h1>
-        
-        <div class="important-notice">
-            AL UTILIZAR RADAR-SD (SISTEMA VANGUARD), USTED ACEPTA EXPRESAMENTE EL PROCESAMIENTO DE SUS DATOS DE UBICACIÓN Y EL USO DE SENSORES DE HARDWARE BAJO LOS TÉRMINOS DESCRITOS EN ESTE DOCUMENTO.
-        </div>
+<div class="container">
+    <h1>Política de Anonimato, Protocolo de Red y Responsabilidad Técnica</h1>
+    <div class="effective-date">Última actualización: Julio 2026 | Aplicación: RADAR-SD | Versión Legal: 1.0.0</div>
 
-        <p>Radar-SD no es una aplicación convencional basada en la nube. Es una red de vigilancia urbana <span class="highlight">descentralizada y P2P (Peer-to-Peer)</span>. Esta arquitectura redefine la privacidad, eliminando la necesidad de servidores centrales y otorgando al usuario el control absoluto de su información.</p>
-
-        <h2>1. Identidad Criptográfica y Anonimato</h2>
-        <p>A diferencia de otras plataformas, Radar-SD no solicita nombres, correos electrónicos, números de teléfono ni perfiles de redes sociales. Tu identidad en la red es puramente <span class="highlight">criptográfica</span>.</p>
-        <ul>
-            <li><strong>Generación de Llaves:</strong> Al iniciar, el sistema genera un par de llaves asimétricas (ECDSA) utilizando el hardware seguro de tu dispositivo (Android KeyStore / StrongBox).</li>
-            <li><strong>Identificador de Nodo (NODO_ID):</strong> Tu identidad pública es un hash irreversible de tu llave pública. Este ID permite que otros nodos verifiquen la autenticidad de tus reportes sin conocer tu identidad real.</li>
-            <li><strong>Firma Digital:</strong> Cada acción que realizas (reportar o validar) es firmada digitalmente. Solo tú, a través de tu llave privada protegida por hardware, puedes autorizar estas transmisiones.</li>
-        </ul>
-
-        <h2>2. Uso y Tratamiento de la Ubicación</h2>
-        <p>La ubicación es la columna vertebral de Radar-SD. Sin ella, la red mesh no puede operar. Procesamos la ubicación de dos formas:</p>
-        <h3>A. Posicionamiento en el Mapa (GPS)</h3>
-        <p>Utilizamos el GPS para fijar con precisión milimétrica la ubicación de las anomalías urbanas (baches, fallas eléctricas, etc.). Estos datos se guardan en tu base de datos local y se comparten con otros nodos solo cuando tú decides "Transmitir".</p>
-        <h3>B. Descubrimiento de Proximidad (Nearby)</h3>
-        <p>Para versiones de Android anteriores a la 12, se requiere el permiso de ubicación para permitir que el protocolo <span class="highlight">Google Nearby Connections</span> identifique otros teléfonos cercanos y construya la red mesh de sincronización.</p>
-
-        <h2>3. Uso de la Cámara y Multimedia</h2>
-        <p>El acceso a la cámara se solicita exclusivamente para la captura de evidencia técnica. Radar-SD utiliza un motor de <span class="highlight">IA Local (TensorFlow Lite)</span> para analizar la imagen en tiempo real y asignar un nivel de confianza al reporte. Las imágenes se almacenan en el directorio privado de la aplicación y se transfieren a otros nodos durante la sincronización táctica.</p>
-
-        <h2>4. Almacenamiento y Derechos del Usuario</h2>
-        <p>Toda la información que recibes de otros ciudadanos se almacena en una base de datos <span class="highlight">SQLite (Room)</span> en tu dispositivo. Radar-SD no posee una "nube" donde se guarden estos datos.</p>
-        <ul>
-            <li><strong>Derecho al Olvido:</strong> Puedes eliminar cualquier reporte que hayas creado desde la pantalla de detalles. Esto enviará una señal de purga a la red mesh para informar que el dato debe ser eliminado.</li>
-            <li><strong>Limpieza de Caché:</strong> En la sección de ajustes, puedes eliminar la caché de mapas (OpenStreetMap) para liberar espacio de almacenamiento.</li>
-            <li><strong>Eliminación Total:</strong> Al desinstalar la aplicación o limpiar los datos desde los ajustes del sistema Android, toda tu base de datos y tu identidad criptográfica se borrarán permanentemente. No existe forma de recuperar una identidad borrada.</li>
-        </ul>
-
-        <h2>5. Seguridad en la Transmisión (P2P)</h2>
-        <p>Aunque no hay un servidor central, los datos están protegidos durante el tránsito:</p>
-        <div class="vanguard-box">
-            <strong>Protocolo Vanguard:</strong> Los datos se transfieren mediante túneles cifrados de Google Nearby. Además, cada reporte incluye una firma ECDSA y una prueba de trabajo (Proof of Work) para prevenir ataques de spam y asegurar la integridad de la información recibida de otros nodos.
-        </div>
-
-        <h2>6. Servicios de Terceros</h2>
-        <p>Para ofrecer una experiencia operativa completa, integramos:</p>
-        <ul>
-            <li><strong>Google Play Services:</strong> Utilizado para la infraestructura de red Nearby Connections.</li>
-            <li><strong>OpenStreetMap (OSM):</strong> Proveedor de la cartografía táctica. Las peticiones de mapas pueden exponer tu dirección IP al servidor de tiles de OSM, pero no tu identidad de Radar-SD.</li>
-        </ul>
-
-        <h2>7. Actualizaciones</h2>
-        <p>Esta política puede actualizarse para reflejar mejoras en los protocolos de red. Se recomienda revisar el "Centro de Utilidades" periódicamente.</p>
-
-        <div class="footer">
-            PROTOCOL: RADAR_SD_VANGUARD_CORE<br>
-            VERSION: 2.0.0 (STABLE)<br>
-            SECURITY_LEVEL: HIGH (AES-256 + ECDSA)
-        </div>
+    <div class="legal-clarification">
+        <strong>DECLARACIÓN DE ARQUITECTURA DE RED:</strong> RADAR-SD no es una "plataforma de contenidos" ni un servicio alojado en servidores centralizados. RADAR-SD es un <strong>Protocolo de Comunicación Descentralizado (P2P) de Código Abierto</strong> diseñado estrictamente para el <strong>reporte de incidencias ciudadanas</strong>.
+        <br><br>
+        <strong>ANONIMATO Y SEUDONIMIZACIÓN:</strong> El protocolo opera bajo principios de anonimato técnico. No obstante, al adjuntar una fotografía opcional, el usuario acepta que dicha evidencia sea tratada bajo un esquema de <strong>Seudonimización</strong> para fines de integridad y reputación del reporte, vinculándose a la identidad técnica (Nodo) mas no a la identidad civil.
+        <br><br>
+        <strong>IMPOSIBILIDAD TÉCNICA DE CENSURA:</strong> Al no existir servidores centrales, bases de datos unificadas ni un "botón de apagado" (Kill Switch), los desarrolladores carecen físicamente de la capacidad técnica para moderar, eliminar o controlar el contenido una vez que ha sido transmitido a la red Mesh. Cualquier intento de responsabilizar a los desarrolladores por la moderación de contenido en tiempo real es técnicamente inviable y legalmente infundado bajo el principio de <strong>Neutralidad Tecnológica</strong>.
     </div>
+
+    <h2>1. Identidad, Naturaleza del Protocolo y Responsabilidad del Tratamiento</h2>
+    <p>RADAR-SD es un protocolo descentralizado. Bajo los términos del Art. 4 de la LOPDP, el <strong>Responsable del Tratamiento</strong> es el usuario final, quien de manera autónoma y voluntaria decide la finalidad, el alcance y el objeto de la captura de datos al emitir un reporte.</p>
+    <ul>
+        <li><strong>Responsabilidad del Desarrollador (Seguridad Técnica):</strong> El Desarrollador es responsable de la integridad del código fuente, la implementación de protocolos de cifrado (AES-256, ECDSA), la seguridad por diseño y el correcto funcionamiento de las herramientas de anonimización local.</li>
+        <li><strong>Responsabilidad del Usuario (Contenido):</strong> El Usuario es el único responsable de la licitud y veracidad del contenido (fotos, textos) que decide generar y transmitir. El Desarrollador no tiene acceso ni control sobre dichos datos.</li>
+        <li><strong>Rol de los Desarrolladores:</strong> Actúan exclusivamente como proveedores de la herramienta técnica (instrucciones de código). Al no tener acceso a los datos, no pueden ejercer el rol de responsables ni encargados del contenido generado por el usuario.</li>
+        <li><strong>Destinatarios y Fines:</strong> Los datos generados por el Usuario tienen como destinatarios exclusivos a los <strong>demás nodos de la red local (Nearby)</strong> que se encuentren dentro del radio de comunicación. El fin único del tratamiento es la gestión coordinada de alertas ciudadanas y emergencias en una infraestructura descentralizada.</li>
+        <li><strong>Tratamiento de Datos por Diseño:</strong> RADAR-SD no recopila, almacena ni gestiona sus datos personales en servidores centralizados. Toda la información que usted ingresa en la aplicación se almacena exclusivamente en su dispositivo móvil. La comunicación con otros nodos (usuarios) se realiza mediante tecnologías P2P/Nearby que no requieren de un servidor central.</li>
+        <li><strong>Autonomía del Ciudadano:</strong> La aplicación es una herramienta de ejercicio de derechos ciudadanos. El usuario, al capturar una imagen y transmitirla, asume la posición legal de responsable de dicho dato frente a terceros.</li>
+        <li><strong>Responsabilidad sobre el Contenido:</strong> Como usuario, usted actúa como autor de los reportes. La aplicación le brinda un espacio técnico para la difusión de información de interés público. Usted se compromete a no utilizar esta plataforma para publicar información personal de terceros, imágenes que identifiquen personas sin su consentimiento o cualquier otro dato sensible.</li>
+        <li><strong>Domicilio Legal:</strong> Santo Domingo de los Tsáchilas, Ecuador (Únicamente para notificaciones judiciales formales sobre responsabilidad civil de los autores del código).</li>
+    </ul>
+
+    <h2>2. Privacidad por Diseño y Gestión de Identidades Técnicas (Nodos)</h2>
+    <p>En cumplimiento del Art. 20 de la LOPDP, RADAR-SD garantiza que las valoraciones del sistema se apliquen exclusivamente a entidades técnicas y no a personas naturales:</p>
+
+    <div class="detail-subclause">
+        <h3>2.1. Naturaleza del Nodo: La "Identidad Virtual Técnica"</h3>
+        <p>En RADAR-SD, la interacción no ocurre entre humanos identificables, sino entre <strong>Nodos Criptográficos</strong>. Un Nodo es una "marioneta técnica" u objeto digital generado aleatoriamente que no representa ni está vinculado a la identidad civil, biométrica o legal del usuario humano.</p>
+        <p><strong>Sobre el Nodo:</strong> RADAR-SD utiliza identificadores seudonimizados (nodos) para garantizar la privacidad técnica. Estos nodos no contienen información personal del usuario, pero pueden ser vinculados a la actividad del dispositivo.</p>
+        <ul>
+            <li><strong>Seudonimización:</strong> RADAR-SD utiliza identificadores seudonimizados (nodos) para garantizar la privacidad técnica. Estos nodos no contienen información personal del usuario, pero pueden ser vinculados a la actividad del dispositivo para fines de reputación técnica y estabilidad del canal.</li>
+            <li><strong>Generación Diferida de Identidad:</strong> La aplicación <strong>NO genera ninguna identidad criptográfica ni ID de nodo</strong> hasta que el usuario haya aceptado formalmente estos términos. Hasta que el consentimiento sea otorgado, el software permanece en un estado inerte sin capacidad de emitir o recibir datos de la red.</li>
+            <li><strong>Ausencia de Registro (Sin KYC):</strong> La aplicación no conoce, no recopila y no vincula identidades civiles (nombres, cédulas) con los Nodos. Al no existir un registro tradicional (Know Your Customer), el sistema evalúa única y exclusivamente el comportamiento matemático de una llave criptográfica, no la conducta de una persona física.</li>
+            <li><strong>Valoración de Objeto, no de Sujeto:</strong> El sistema de reputación evalúa la <strong>Integridad del Nodo</strong> basándose en la validez de los reportes emitidos. Al vetar un nodo, la red no está censurando a un individuo, sino que el protocolo tecnológico ignora la "Llave Criptográfica X" que no alcanza el umbral de consenso comunitario.</li>
+            <li><strong>Veto por Consenso de Pares:</strong> El "Vanguard Veto" es un mecanismo de defensa donde otros Nodos de la red votan para verificar o purgar reportes específicos. Como es imposible verificar a quién le pertenece el nodo en el mundo real, no existe una afectación directa al honor o la libertad de expresión de un individuo identificable ante la ley.</li>
+            <li><strong>Restricción de Transmisión:</strong> Esta medida restringe únicamente la capacidad de transmisión de la identidad técnica para proteger la estabilidad del canal P2P. El ciudadano mantiene su derecho a recibir información y utilizar la app, garantizando que no existe una vulneración de sus derechos fundamentales.</li>
+        </ul>
+
+        <h3>2.2. Privacidad por Diseño en Contenido Multimedia y Minimización de Datos</h3>
+        <p>RADAR-SD está diseñada para proteger la identidad de los emisores y de terceros mediante técnicas de minimización de datos. Cuando un usuario decide adjuntar una fotografía opcional a un reporte ciudadano, la Aplicación aplica las siguientes medidas de forma automática en el dispositivo local:</p>
+        <ul>
+            <li><strong>Eliminación de Metadatos (EXIF):</strong> El sistema utiliza una purga detallada de metadatos mediante <code>ExifInterface</code>, eliminando permanentemente rastros de GPS, modelo de dispositivo, software de cámara y firmas de autoría antes de su almacenamiento en el sandbox o transmisión a la red Mesh.</li>
+            <li><strong>Ofuscación Temporal:</strong> La Aplicación no registra ni transmite la hora o minuto exacto de la captura de la imagen. El único marcador temporal utilizado es una fecha de expiración referencial (TTL de 6 a 12 días según el consenso de la red), impidiendo la trazabilidad temporal exacta del emisor.</li>
+            <li><strong>Herramientas de Protección a Terceros:</strong> Se provee una herramienta de <strong>desenfocado local</strong> para que el usuario mascare rostros, placas vehiculares o cualquier otro dato personal de terceros antes de compartir el contenido.</li>
+            <li><strong>Optimización de Red P2P:</strong> La eliminación de metadatos pesados reduce el tamaño de los paquetes, permitiendo una transmisión fluida en la red Mesh sin saturar el ancho de banda local.</li>
+            <li><strong>Protección Constitucional:</strong> En cumplimiento del Art. 66.19 de la Constitución del Ecuador, el sistema garantiza el anonimato para proteger la integridad física de los denunciantes, evitando represalias por reportes de interés público.</li>
+        </ul>
+        <p><strong>Consecuencia Legal:</strong> La eliminación de firmas digitales y GPS del autor es una decisión técnica de ingeniería y un mandato constitucional de privacidad. El autor es técnicamente imposible de rastrear a través del archivo.</p>
+
+        <h3>2.3. Herramientas de Cumplimiento e Inteligencia Probabilística</h3>
+        <p>Para cumplir con el deber de <strong>Responsabilidad Proactiva</strong> (Art. 11 LOPDP) sin incurrir en control editorial, RADAR-SD proporciona al usuario un "Asistente de Privacidad" basado en IA local:</p>
+        <ul>
+            <li><strong>Uso de la Función de Reporte:</strong> El sistema de reportes está diseñado para la categorización de incidentes públicos (ej. tráfico, seguridad, infraestructura). El campo de descripción es de uso obligatorio para garantizar la calidad de la red. El usuario declara conocer que el uso indebido de este campo para difundir datos personales de terceros, calumnias o información falsa es de su exclusiva responsabilidad, deslindando al desarrollador de cualquier reclamación legal.</li>
+            <li><strong>Aviso de Privacidad en Reportes:</strong> No incluya nombres, direcciones exactas o datos de identidad de otras personas en su reporte. RADAR-SD es un sistema de reporte de eventos, no de denuncias personales. Usted es responsable del contenido publicado.</li>
+            <li><strong>Análisis Probabilístico, No Legal:</strong> El módulo de IA local analiza la imagen y arroja un puntaje estadístico. Este resultado es **estrictamente probabilístico** y no constituye una calificación legal de ilicitud.</li>
+            <li><strong>Advertencia de Seguridad:</strong> Si el sistema detecta una alta probabilidad de contenido restringido, genera una advertencia técnica. Es el usuario, en su calidad de <strong>Responsable del Tratamiento</strong>, quien debe realizar el juicio de legalidad final.</li>
+            <li><strong>Decisión Soberana del Usuario:</strong> Al confirmar el envío tras la advertencia, el usuario declara bajo su única responsabilidad que el contenido es lícito y necesario. La aplicación actúa como un conducto técnico neutral que no ejerce censura previa basada en algoritmos.</li>
+            <li><strong>Herramienta de Edición Local:</strong> La app permite al usuario difuminar manualmente áreas de la imagen para proteger su propia privacidad antes de la transmisión.</li>
+        </ul>
+        <p><strong>Defensa Legal:</strong> Al proporcionar estas herramientas, los desarrolladores cumplen con su deber de diseñar sistemas que faciliten la protección de datos, dejando la ejecución y decisión final en manos del usuario, quien es el único que conoce el contexto del reporte.</p>
+
+        <h3>2.4. Ofuscación de Ubicación y Rastreo</h3>
+        <ul>
+            <li><strong>Radio de Privacidad (500m):</strong> Para evitar que observadores externos (vía cámaras de seguridad o vigilancia física) vinculen al usuario con un reporte, la aplicación permite señalar el incidente en un radio de hasta **500 metros** de distancia de la ubicación real del emisor.</li>
+            <li><strong>Ubicación del Evento vs. Ubicación del Usuario:</strong> La aplicación solo captura y transmite las coordenadas del <strong>incidente reportado</strong>. Nunca se transmite la ubicación GPS en tiempo real del dispositivo emisor.</li>
+            <li><strong>Sin Rastreo de Cerca:</strong> La comunicación P2P (Bluetooth/Wi-Fi Direct) es estrictamente para el intercambio de paquetes de datos. La aplicación <strong>NO emite notificaciones ni alertas</strong> cuando el usuario se acerca a otro nodo, eliminando cualquier riesgo de acoso físico o "stalking" digital.</li>
+        </ul>
+    </div>
+
+    <h2>3. Mecanismos de Borrado, Inmutabilidad y Caducidad (TTL)</h2>
+    <p>El sistema de eliminación de datos en RADAR-SD no es una decisión administrativa, es un <strong>protocolo criptográfico y temporal</strong> diseñado para equilibrar el derecho al olvido con la integridad de la red descentralizada.</p>
+
+    <div class="warning-box">
+        <strong>PROTOCOLO DE BORRADO Y CADUCIDAD MECÁNICA:</strong><br><br>
+        <ol>
+            <li><strong>Eliminación Manual y Transmisión de Actualización:</strong> Cuando el autor original elimina un reporte, su dispositivo transmite una actualización del reporte marcada como "Eliminado". Los nodos receptores verifican la firma y marcan el reporte como "Eliminado" en su base de datos local, ademas de limpiar campos e imagen del reporte.</li>
+            <li><strong>Ocultación por Consenso (Vanguard Veto):</strong> La comunidad puede marcar reportes como "No existentes". Si el peso cae por debajo de -25, el sistema lo oculta automáticamente de la interfaz de usuario. Este es un mecanismo de autorregulación, no de moderación centralizada.</li>
+            <li><strong>Caducidad Obligatoria e Inevitable (TTL):</strong> Cada reporte posee un campo <code>expiresAt</code>. El sistema garantiza la eliminación total de los datos en un plazo máximo de <strong>12 días</strong> (6 días iniciales para validación y 6 días adicionales en fase anónima si se alcanza el consenso de veracidad), asegurando el derecho al olvido y la limpieza técnica de la red.</li>
+            <li><strong>Limitación por Inactividad de Nodo:</strong> La efectividad de la "Revocación Firmada" (Lista Negra/Tombstones) depende de que los nodos estén activos y dentro del rango de comunicación. Si un dispositivo permanece apagado o fuera de la red, no recibirá la orden de borrado inmediata. En estos casos, el cumplimiento del borrado queda garantizado por el **TTL Obligatorio**, que ejecutará la eliminación física al siguiente ciclo de inicio tras la expiración, independientemente de la conectividad.</li>
+        </ol>
+    </div>
+
+    <h2>4. Gestión de Almacenamiento y Responsabilidad del Usuario</h2>
+    <p>La arquitectura de RADAR-SD delega la persistencia de datos al usuario final:</p>
+    <ul>
+        <li><strong>Almacenamiento Privado (Sandbox):</strong> Los datos recibidos se almacenan en un espacio seguro exclusivo de la aplicación. La aplicación <strong>NO tiene acceso</strong> ni control sobre los archivos que el usuario decida exportar manualmente a la galería o carpetas públicas del sistema.</li>
+        <li><strong>Derecho de Revocación:</strong> Usted puede revocar su consentimiento en cualquier momento desde la ruta <strong>Ajustes > Seguridad > Revocar Consentimiento</strong>. Esta acción eliminará su identidad criptográfica y detendrá toda actividad de red del dispositivo.</li>
+        <li><strong>Transferencia de Responsabilidad:</strong> Una vez que el usuario decide exportar un archivo a su almacenamiento público (Galería, Documentos), el archivo sale del ámbito de control de RADAR-SD. El usuario asume <strong>total responsabilidad legal</strong> sobre la posesión, distribución y uso de dichos archivos fuera de la red.</li>
+        <li><strong>Imposibilidad de Acceso Remoto:</strong> RADAR-SD no puede acceder, modificar ni eliminar archivos exportados por el usuario en su sistema de archivos externo, ya que esto violaría las políticas de seguridad de Android/iOS y los derechos de privacidad del usuario.</li>
+    </ul>
+
+    <h2>5. Datos de Interés Público e Información Volátil (Módulo OSINT)</h2>
+    <p>El módulo "Monitor de Candidatos" opera como un visor técnico de datos históricos y registros públicos de fuentes oficiales (CNE) integrados estáticamente en la aplicación.</p>
+    <ul>
+        <li><strong>Información No Actualizada (Volatility Warning):</strong> Debido a la naturaleza dinámica de los procesos políticos, los datos mostrados (planes de gobierno, biografías, afiliaciones) pueden no representar la versión más reciente u oficial. RADAR-SD no garantiza la vigencia de la información en tiempo real.</li>
+        <li><strong>Deber de Verificación Personal:</strong> El ciudadano tiene la obligación de verificar cualquier dato contenido en este módulo con las <strong>fuentes oficiales (CNE, Gacetas)</strong> antes de su uso o toma de decisiones, dada la alta volatilidad de la información electoral.</li>
+        <li><strong>Criterio y Opinión Algorítmica:</strong> El análisis de viabilidad e impacto de cada propuesta se considera un <strong>Criterio u Opinión propia del protocolo Vanguard</strong> basado en modelos de datos. No representa información real u oficial. El ciudadano debe utilizar dicha información bajo su propio criterio y juicio crítico.</li>
+    </ul>
+
+    <h2>6. Protección de Menores (Age Gate + Declaración Jurada)</h2>
+    <p>El acceso a la red está protegido por un sistema de doble capa:</p>
+    <ul>
+        <li><strong>Barrera Técnica (Age Gate):</strong> Mecanismo que bloquea funcionalidades de red si no se supera el umbral de edad.</li>
+        <li><strong>Declaración Jurada:</strong> El usuario declara bajo su responsabilidad legal ser mayor de 18 años.</li>
+        <li><strong>Sanción por Falsedad:</strong> La falsedad en esta declaración conlleva responsabilidad penal y civil para el usuario adulto que facilitó el acceso al menor.</li>
+    </ul>
+
+    <h2>7. Propiedad de Datos, Derechos de Imagen y Cadena de Custodia</h2>
+    <div class="vanguard-box">
+        <strong>PROTOCOLO DE PROPIEDAD Y CUSTODIA DE DATOS:</strong><br><br>
+        En RADAR-SD, la propiedad de los datos sigue una cadena jerárquica estricta que protege los derechos de los sujetos retratados:<br><br>
+        <ol>
+            <li><strong>Derechos del Sujeto (Primacía):</strong> Los derechos de imagen y privacidad de las personas retratadas en un reporte prevalecen sobre cualquier otro derecho.</li>
+            <li><strong>Derechos del Autor (Segundía):</strong> El autor posee los derechos sobre la <em>creación del reporte</em>, pero no sobre la identidad de terceros.</li>
+            <li><strong>Transferencia de Bóveda a Bóveda:</strong> La transmisión Mesh es una transferencia de almacenamiento privado a almacenamiento privado. El receptor adquiere la responsabilidad de custodia del dato.</li>
+        </ol>
+        <strong>Sobre la Persistencia Temporal:</strong> Si un reporte es revocado o marcado como ilegal por consenso comunitario, el sistema lo oculta inmediatamente de la interfaz. No obstante, el archivo físico puede permanecer en el almacenamiento local del nodo **exclusivamente hasta que se cumpla su tiempo de vida natural (TTL)**. Este periodo residual es una limitación técnica de la arquitectura descentralizada y no constituye una voluntad de almacenamiento permanente por parte de los desarrolladores. La eliminación mecánica final es inevitable al cumplirse el TTL.
+    </div>
+
+    <h2>8. Inmunidad de Intermediario y Defensa de Protocolo</h2>
+    <div class="legal-clarification">
+        <strong>DEFENSA DE PROTOCOLO NEUTRO Y NEUTRALIDAD TECNOLÓGICA:</strong><br><br>
+        RADAR-SD se define legalmente como un <strong>Protocolo de Comunicación Descentralizado</strong>, análogo a un estándar de red (como HTTP) o a una herramienta de productividad.
+        <ul>
+            <li><strong>Autores de Código vs. Operadores:</strong> Los desarrolladores actúan únicamente como autores de software de código abierto. No operan infraestructura, no tienen acceso a los datos y carecen de capacidad de moderación remota.</li>
+            <li><strong>Inmunidad de Intermediario:</strong> Bajo los principios de Safe Harbor, los autores de un protocolo neutral no son responsables por el uso que terceros den a dicha tecnología. La responsabilidad reside en el usuario emisor.</li>
+            <li><strong>Protocolo de Autodefensa de Red:</strong> RADAR-SD no facilita la impunidad. El sistema de Consenso Comunitario actúa como un mecanismo de depuración: cualquier Nodo (marioneta técnica) utilizado para fines ilícitos es identificado por otros Nodos mediante reportes negativos y restringido de forma descentralizada por la propia red. El anonimato actúa como un escudo para el ciudadano de buena fe, mientras que el aislamiento técnico neutraliza al agente malicioso mediante la "muerte digital" de su identidad técnica (Nodo) sin necesidad de intervención centralizada.</li>
+        </ul>
+        <strong>Limitación de Responsabilidad:</strong> RADAR-SD se proporciona "tal cual" (As Is). Los desarrolladores renuncian a cualquier responsabilidad por daños directos o consecuencias legales derivadas de la interacción entre usuarios.
+    </div>
+
+    <p><em>Al utilizar RADAR-SD, usted reconoce y acepta que opera como un protocolo anónimo, que no existe un servidor central que controle los datos, que la eliminación de datos es un proceso técnico automatizado (TTL) y que asume total responsabilidad por los datos que genera y comparte.</em></p>
+
+    <div class="footer">
+        SISTEMA: RADAR_SD_VANGUARD<br>
+        VERSIÓN DE DOCUMENTO LEGAL: 1.0.0<br>
+        NIVEL DE SEGURIDAD: ALTO (AES-256 + ECDSA + TTL + ANONIMIZACIÓN)<br>
+        BASE LEGAL: CONSTITUCIÓN | LOPDP ECUADOR | PRINCIPIO DE NEUTRALIDAD TECNOLÓGICA
+    </div>
+</div>
 </body>
 </html>
